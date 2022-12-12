@@ -77,7 +77,7 @@ jobs:
       - uses: ilammy/msvc-dev-cmd@v1
       - uses: microsoft/setup-msbuild@v1.1
         with:
-          vs-version: '14.34'
+          vs-version: '17.4'
           msbuild-architecture: ${{ matrix.target_platforms }}
       - uses: erlef/setup-beam@v1
         with:
