@@ -79,7 +79,7 @@ jobs:
         with:
           toolset: 14.XX
           vsversion: 2019
-          msbuild-architecture: ${{ matrix.target_platforms }}
+          arch: ${{ matrix.target_platforms }}
       - uses: erlef/setup-beam@v1
         with:
           otp-version: ${{ matrix.otp }}
