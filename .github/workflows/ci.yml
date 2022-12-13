@@ -62,7 +62,6 @@ jobs:
         working_directory: ["nx", "torchx"]
         elixir: ["1.14.2"]
         otp: ["24.0"]
-        target_platforms: [x64]
     defaults:
       run:
         working-directory: ${{ matrix.working_directory }}
@@ -77,9 +76,9 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ilammy/msvc-dev-cmd@v1
         with:
-          toolset: 14.XX
+          toolset: 16.XX
           vsversion: 2019
-          arch: ${{ matrix.target_platforms }}
+          arch: x64
       - uses: erlef/setup-beam@v1
         with:
           otp-version: ${{ matrix.otp }}
